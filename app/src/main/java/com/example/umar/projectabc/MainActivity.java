@@ -92,7 +92,11 @@ public class MainActivity extends AppCompatActivity {
             String action = intent.getAction();
             if (action.equals(MyService.ACTION_UPDATE_CNT)) {
                 int int_from_service = intent.getIntExtra(MyService.KEY_INT_FROM_SERVICE, 0);
-                tvCount.setText(String.valueOf(int_from_service));
+                float d=int_from_service;
+                d=d/a*100;
+                int k=Math.round(d);
+                //tvCount.setText((show)+"%");
+                tvCount.setText(k+"%");
             }
         }
     }

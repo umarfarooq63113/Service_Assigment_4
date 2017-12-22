@@ -91,7 +91,6 @@ public class MyService extends Service {
         public void run() {
             c = 0;
             running = true;
-            //while (running){
             while (running && c <= MainActivity.a) {
                 try {
                     Thread.sleep(1000);
